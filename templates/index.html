@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<head>
+    <title>AI占い</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>    
+    <div class="loading-overlay" id="loadingOverlay">
+        <div class="loading-text">占い中...</div>
+    </div>
+    <div class="container">
+        <div class="left-section">
+            <img src="/static/images/image1.png" alt="占い師" class="fortune-teller">
+        </div>
+        <div class="right-section">
+            <h1>AI占い</h1>
+            <h2>以下を入力してください</h2>
+            <form id="myForm" method="post" action="/result">
+                <div class="form">
+                    <label>名前 : <input type="text" id="name" name="name"></label>
+                </div>
+                <div class="form">
+                    <label>血液型 : <input type="text" id="blood_type" name="blood_type"></label>
+                </div>
+                <div class="form">
+                    <select name="category">
+                        <option>恋愛</option>
+                        <option>仕事</option>
+                        <option>学業</option>
+                    </select>
+                </div>
+                <input type="submit" value="送信">
+            </form>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById("myForm").addEventListener("submit", function() {
+            var loadingOverlay = document.getElementById("loadingOverlay");
+            loadingOverlay.style.display = "flex";
+        });
+    </script>
+</body>
+</html>

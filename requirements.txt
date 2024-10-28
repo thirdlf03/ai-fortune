@@ -1,0 +1,11 @@
+fastapi
+uvicorn
+openai
+Jinja2
+<<<<<<< HEAD
+python-multipart
+=======
+python-multipart
+python-dotenv
+
+>>>>>>> 2c5d010 (a)
