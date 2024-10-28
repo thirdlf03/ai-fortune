@@ -19,7 +19,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    max-width: 1200px;
+    max-width: 1400px;
     width: 100%;
 }
 
@@ -39,6 +39,7 @@ body {
     flex: 1;
     text-align: left;
     max-width: 700px;
+    height: auto;
 }
 
 h1 {
@@ -107,6 +108,7 @@ p {
     background-color: rgba(28, 37, 65, 0.8);
     padding: 20px;
     border-radius: 10px;
+    font-size: 30px;
 }
 
 
