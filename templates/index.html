@@ -19,13 +19,34 @@
                     <label>名前 : <input type="text" id="name" name="name"></label>
                 </div>
                 <div class="form">
-                    <label>血液型 : <input type="text" id="blood_type" name="blood_type"></label>
+                    <label>血液型 : 
+                        <select name="blood_type">
+                            <option>A型</option>
+                            <option>B型</option>
+                            <option>O型</option>
+                            <option>AB型</option>
+                        </select>
+                    </label>
+                </div>
+                <div class="form">
+                    <label>誕生日 : <input type="text" id="birthday" name="birthday"></label>
+                </div>
+                <div class="form">
+                    <label>好きな季節 : 
+                        <select name="season">
+                            <option>春</option>
+                            <option>夏</option>
+                            <option>秋</option>
+                            <option>冬</option>
+                        </select>
+                    </label>
                 </div>
                 <div class="form">
                     <select name="category">
                         <option>恋愛</option>
                         <option>仕事</option>
                         <option>学業</option>
+                        <option>健康</option>
                     </select>
                 </div>
                 <input type="submit" value="送信">
