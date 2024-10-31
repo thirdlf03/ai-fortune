@@ -36,16 +36,17 @@ async def index(request: Request):
     return templates.TemplateResponse("index.html", {"request": request})
 
 @app.post("/result", response_class=HTMLResponse)
-async def GetResult(request:Request, name: str = Form(), blood_type: str = Form(), category: str = Form()):
+async def GetResult(request:Request, name: str = Form(), blood_type: str = Form(), birthday: str = Form(), season: str = Form() ,category: str = Form()):
     completion = client.chat.completions.create(
         model="gpt-4o-mini",
         messages=[
             {"role": "system", "content": "あなたはプロの占い師です。"},
             {"role": "system", "content": "与えられた情報からユーザーのラッキーカラーを占ってください"},
             {"role": "system", "content": "出力は、~さんのラッキーカラーは~色です。から始めてください"},
+            {"role": "system", "content": "出力文字数は250文字くらいで"},
             {
                 "role": "user",
-                "content": f"名前は{name}で血液型は{blood_type}です。{category}について答えてください。"
+                "content": f"名前は{name}で血液型は{blood_type}です。誕生日は{birthday}で、好きな季節は{season}です。与えられた情報を元に{category}について答えてください。"
             }
         ]
     )
