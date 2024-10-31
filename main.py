@@ -42,7 +42,8 @@ async def GetResult(request:Request, name: str = Form(), blood_type: str = Form(
         messages=[
             {"role": "system", "content": "あなたはプロの占い師です。"},
             {"role": "system", "content": "与えられた情報からユーザーのラッキーカラーを占ってください"},
-            {"role": "system", "content": "出力は、~さんのラッキーカラーは~色です。から始めてください"},
+            {"role": "system", "content": f"出力は、{name}さんのラッキーカラーは~色です。から始めてください"},
+            {"role": "system", "content": f"{category}についての話を加えてください"},
             {"role": "system", "content": "出力文字数は250文字くらいで"},
             {
                 "role": "user",
